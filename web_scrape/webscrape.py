@@ -82,7 +82,7 @@ def set_tier(physician: physician.Physician) -> None:
         raise AttributeError(f'Residency: {physician.get_residency()} not in a tier')
 
 
-def set_overall_rating(physician: physician.Physician, soup: BeautifulSoup) -> None:
+def set_overall_rating_healthgrades(physician: physician.Physician, soup: BeautifulSoup) -> None:
     '''
     Sets overall rating during webscrape
     '''
@@ -92,7 +92,7 @@ def set_overall_rating(physician: physician.Physician, soup: BeautifulSoup) -> N
     except IndexError:
         physician.set_overall_rating('N/A')
 
-def set_comment(physician: physician.Physician, soup: BeautifulSoup) -> None:
+def set_comment_healthgrades(physician: physician.Physician, soup: BeautifulSoup) -> None:
     '''
     Sets the comment as a 3-tuple of (date, rating, comment)
     '''
@@ -150,7 +150,7 @@ def set_comment(physician: physician.Physician, soup: BeautifulSoup) -> None:
         
 def webscrape_healthgrades(physician: physician.Physician) -> None:
     '''
-    Webscrapes healthgrades for the given physician
+    Webscrapes healthgrades.com for the given physician
     '''
     url = physician.get_link('Healthgrades')
 
@@ -161,24 +161,46 @@ def webscrape_healthgrades(physician: physician.Physician) -> None:
         request = requests.get(url) # Gets HTML of website
         soup = BeautifulSoup(request.content, 'html.parser')
 
-        set_overall_rating(physician, soup)
-        set_comment(physician, soup)
+        set_overall_rating_healthgrades(physician, soup)
+        set_comment_healthgrades(physician, soup)
+
+def webscrape_vitals(physician: physician.Physician) -> None:
+    '''
+    Webscrapes vitals.com for the given physician
+    '''
+    url = physician.get_link('Vitals')
+    page = 1
+
+    # Redirects url to the reviews page
+    if '.html' in url:
+        url = url[:-5]
+        url += f'/reviews?page={page}&sort=updated_at_dt%20desc'
+
+    if url != 'N/A':
+        set_source(physician, 'Vitals')
+        set_tier(physician)
+
+        request = requests.get(url) # Gets HTML of website
+        soup = BeautifulSoup(request.content, 'html.parser')
+
+        set_overall_rating_vitals(physician, soup)
+        set_comment_vitals(physician, soup)
         
 
 def webscrape_links(physician: physician.Physician) -> None:
     '''
     Calls the webscrape on each link in the physican
     '''
-    if physician.get_link('Healthgrades') != 'N/A':
-        webscrape_healthgrades(physician)
+    # if physician.get_link('Healthgrades') != 'N/A':
+    #     webscrape_healthgrades(physician)
 
-    # if physician.get_link('Vitals' != 'N/A'): change .html to /reviews?page=1&sort=updated_at_dt%20desc
-    #     webscrape_vitals(physician)
+    if physician.get_link('Vitals') != 'N/A': # change .html to /reviews?page=1&sort=updated_at_dt%20desc
+        webscrape_vitals(physician)
 
-    # if physician.get_link('RateMDs' != 'N/A'): Does by page num in link
+    # if physician.get_link('RateMDs') != 'N/A': Does by page num in link
     #     webscrape_ratemds(physician)
 
-    # if physician.get_link('Yelp' != 'N/A'): Does by num queries in link
+    # if physician.get_link('Yelp') != 'N/A': Does by num queries in link
     #     webscrape_yelp(physician)
     
 
