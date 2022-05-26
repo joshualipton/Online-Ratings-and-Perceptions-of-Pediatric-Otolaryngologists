@@ -1,0 +1,51 @@
+{'results': [
+        {'commentId': '4530ca81-ab1d-4d53-8763-e80364d702d1', 'overallScore': 5, 'displayName': 'Anonymous', 'communityMemberDetails': 'Anonymous', 'location': None, 'submittedDate': 'Jun 25,
+            2021', 'reviewTitle': None, 'commentText': 'Helpful informative gentile', 'reviewHelpful': 'UnAnswered', 'flagged': 'NotFlagged', 'allowFlagging': True, 'helpfulCount': 1, 'notHelpfulCount': 0, 'providerDetail': {'id': 'X68XF', 'displayName': "Dr. Luginbuhl's", 'image': '/img/prov/x/6/8/x68xf_w90h120_vSyOHWt0Al.jpg', 'primarySpecialty': 'Ear, Nose, and 
+    Throat'
+            }, 'providerResponse': {'providerSurveyCommentID': 158724, 'commentText': 'Hello, thank you so much for the positive review! Feel free to reach out to us if you need anything. Have a wonderful day.', 'isFromProvider': False, 'flagCount': 0, 'commentStatusID': 0, 'insertedOn': 'June 29,
+                2021', 'flagged': 'NotFlagged', 'allowFlagging': True
+            }, 'answers': {'officeSchedulingRating': 5, 'officeEnvironmentRating': 5, 'providerStaffRating': 5, 'waitTime': 1, 'providerTimeAllocationRating': 5, 'providerAnswersRating': 5, 'providerExplanationRating': 5, 'providerTrustRating': 5
+            }
+        },
+        {'commentId': '3a38a931-87a8-4ea8-899f-f8af2f2bf771', 'overallScore': 5, 'displayName': 'Tony D', 'communityMemberDetails': 'Tony D', 'location': None, 'submittedDate': 'Mar 22,
+            2021', 'reviewTitle': None, 'commentText': 'Dr. Luginbuhl is true professional that is really on top of his game. A caring and very detailed oriented doctor. More than willing to take the time to explain the treatments and great follow up right after the operation. \nI would highly recommend him to anyone inflicted by vocal cord cancer. ', 'reviewHelpful': 'UnAnswered', 'flagged': 'NotFlagged', 'allowFlagging': True, 'helpfulCount': 0, 'notHelpfulCount': 0, 'providerDetail': {'id': 'X68XF', 'displayName': "Dr. Luginbuhl's", 'image': '/img/prov/x/6/8/x68xf_w90h120_vSyOHWt0Al.jpg', 'primarySpecialty': 'Ear, Nose, and Throat'
+            }, 'providerResponse': {'providerSurveyCommentID': 145237, 'commentText': "Tony, thank you for taking the time to leave a review for us at Adam Luginbuhl, MD. We're happy we could meet your expectations!", 'isFromProvider': False, 'flagCount': 0, 'commentStatusID': 0, 'insertedOn': 'March 25,
+                2021', 'flagged': 'NotFlagged', 'allowFlagging': True
+            }, 'answers': {'providerStaffRating': 5, 'waitTime': 1, 'providerTimeAllocationRating': 5, 'providerAnswersRating': 5, 'providerExplanationRating': 5, 'providerTrustRating': 5
+            }
+        },
+        {'commentId': '8fa0a5e7-9c4d-430b-9bcd-95b21d1110e2', 'overallScore': 5, 'displayName': 'Kimberly', 'communityMemberDetails': 'Kimberly', 'location': None, 'submittedDate': 'Mar 02,
+            2021', 'reviewTitle': None, 'commentText': 'Dr. Luginbuhl was the third ENT I visited for a mass in my throat.  He took one look at it pretty much knew immediately it was malignant.  Eight days later I was in the OR having it removed.  He was an exceptional physician and I felt extremely confident being under his care.  I highly recommend him.  ', 'reviewHelpful': 'UnAnswered', 'flagged': 'NotFlagged', 'allowFlagging': True, 'helpfulCount': 0, 'notHelpfulCount': 0, 'providerDetail': {'id': 'X68XF', 'displayName': "Dr. Luginbuhl's", 'image': '/img/prov/x/6/8/x68xf_w90h120_vSyOHWt0Al.jpg', 'primarySpecialty': 'Ear, Nose, and Throat'
+            }, 'providerResponse': {'providerSurveyCommentID': None, 'commentText': None, 'isFromProvider': True, 'flagCount': 0, 'commentStatusID': 0, 'insertedOn': None, 'flagged': 'NotFlagged', 'allowFlagging': True
+            }, 'answers': {'officeSchedulingRating': 5, 'officeEnvironmentRating': 5, 'providerStaffRating': 5, 'waitTime': 1, 'providerTimeAllocationRating': 5, 'providerAnswersRating': 5, 'providerExplanationRating': 5, 'providerTrustRating': 5
+            }
+        },
+        {'commentId': 'ba377574-7ddd-4397-9af1-2ae744828a6a', 'overallScore': 5, 'displayName': 'Claire F', 'communityMemberDetails': 'Claire F', 'location': None, 'submittedDate': 'Jan 23,
+            2021', 'reviewTitle': None, 'commentText': 'Dr. Luginbuhl is not only an excellent surgeon, but a kind and compassionate man. After my cancer surgery, he has been evaluating me on a regular basis for almost two years now. He always explains everything thoroughly, and has a way of putting me at ease. I highly recommend him. ', 'reviewHelpful': 'UnAnswered', 'flagged': 'NotFlagged', 'allowFlagging': True, 'helpfulCount': 0, 'notHelpfulCount': 0, 'providerDetail': {'id': 'X68XF', 'displayName': "Dr. Luginbuhl's", 'image': '/img/prov/x/6/8/x68xf_w90h120_vSyOHWt0Al.jpg', 'primarySpecialty': 'Ear, Nose, and Throat'
+            }, 'providerResponse': {'providerSurveyCommentID': 139125, 'commentText': 'Claire, thank you for your kind words and this wonderful review! We hope you have a great day!', 'isFromProvider': False, 'flagCount': 0, 'commentStatusID': 0, 'insertedOn': 'January 28,
+                2021', 'flagged': 'NotFlagged', 'allowFlagging': True
+            }, 'answers': {'officeSchedulingRating': 5, 'officeEnvironmentRating': 5, 'providerStaffRating': 5, 'waitTime': 1, 'providerTimeAllocationRating': 5, 'providerAnswersRating': 5, 'providerExplanationRating': 5, 'providerTrustRating': 5
+            }
+        },
+        {'commentId': '8f233d9f-c5ec-4d9e-999a-3e0d3eaa55c6', 'overallScore': 5, 'displayName': 'Mizok family', 'communityMemberDetails': 'Mizok family', 'location': None, 'submittedDate': 'Jan 03,
+            2021', 'reviewTitle': None, 'commentText': 'Dr. Luginbuhl along with Dr. Joseph Curry treated my husband for a chondrosarcoma of the larnyx. They reconstructed his airway and voicebox using muscle and bone from his forearm. The surgery took 13 
+    + hours. They worked tirelessly to and save his voice and swallowing function. We traveled 2.5 hours to see them. My husband is only 44.  Drs. In our area would not touch him being that it is such a rare cancer. We are more then grateful for their efforts. Hoping and praying that when the stent comes out that he will have function again. They are both AMAZING! Also 
+    kept me well informed along the way!', 'reviewHelpful': 'UnAnswered', 'flagged': 'NotFlagged', 'allowFlagging': True, 'helpfulCount': 2, 'notHelpfulCount': 0, 'providerDetail': {'id': 
+    'X68XF', 'displayName': "Dr. Luginbuhl's", 'image': '/img/prov/x/6/8/x68xf_w90h120_vSyOHWt0Al.jpg', 'primarySpecialty': 'Ear, Nose, and Throat'
+            }, 'providerResponse': {'providerSurveyCommentID': None, 'commentText': None, 'isFromProvider': True, 'flagCount': 0, 'commentStatusID': 0, 'insertedOn': None, 'flagged': 'NotFlagged', 'allowFlagging': True
+            }, 'answers': {}
+        }
+    ], 'combinedComments': [], 'totalCombinedCommentCount': 0, 'totalCommentCount': 26, 'suppressed': False, 'serverError': False, 'commentSortOptions': [
+        {'id': 1, 'displayName': 'Most Recent', 'forCombinedComments': False
+        },
+        {'id': 2, 'displayName': 'Oldest', 'forCombinedComments': False
+        },
+        {'id': 3, 'displayName': 'Highest Rated', 'forCombinedComments': False
+        },
+        {'id': 4, 
+    'displayName': 'Lowest Rated', 'forCombinedComments': False
+        },
+        {'id': 5, 'displayName': 'Helpful', 'forCombinedComments': False
+        }
+    ]
+}
