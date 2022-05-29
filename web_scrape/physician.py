@@ -11,7 +11,7 @@ class Physician:
         self._residency = '' 
         self._tier = ''
         self._links = {'Healthgrades' : '', 'Vitals' : '', 'RateMDs' : '', 'Yelp' : ''} # Dictionary of links
-        self._comments = [] # List of 3-tuples of comments in form (Date, Rating, Comment)
+        self._comments = [] # List of 5-tuples of comments in form (Date, Source, Rating, Comment, Useful)
         self._overall_rating = 0
         self._helpful = 0 # 0 if not helpful 1 if was helpful
 
@@ -101,13 +101,13 @@ class Physician:
     
     def get_comments(self) -> 'list[tuple(str, str, str)]':
         '''
-        Returns comments in the form (date, rating, comment)
+        Returns comments in the form (date, rating, comment, useful)
         '''
         return self._comments
 
     def add_comment(self, comment: 'tuple(str, str, str)') -> None:
         '''
-        Adds a comment in the form (date, rating, comment)
+        Adds a comment in the form (date, source, rating, comment)
         '''
         self._comments.append(comment)
 
