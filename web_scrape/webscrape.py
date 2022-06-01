@@ -36,53 +36,55 @@ def set_tier(physician: physician.Physician) -> None:
     '''
     Sets tier based on residency
     '''
-    tier_dict = {'T20_Rsrch' : ['Harvard', 'Grossman', 'Columbia', 'Hopkins', 'Francisco', 
-                                'Duke', 'Perelman', 'Stanford', 'University of Washington', 
-                                'Yale', 'Icahn', 'Washington University', 'Vanderbilt', 
-                                'Cornell', 'Mayo', 'Mayo Medical School', 'University of Pittsburgh', 'Northwestern', 
-                                'University of Michigan', 'Los Angeles', 'San Diego', 'Pritzker'],
-                'T50_Rsrch' : ['Baylor', 'Emory', 'Case Western', 'University of North Carolina', 
-                                'Southwestern', 'Colorado', 'Southern California', 'Maryland', 
-                                'Ohio State', 'University of Virginia', 'Boston', 'Oregon Health and Science', 
-                                'Alabama', 'Brown', 'University of Utah', 'Albert Einstein', 
-                                'University of Florida', 'University of Rochester', 'University of Wisconsin', 
-                                'Indiana University', 'University of Iowa', 'University of Cincinnati', 
-                                'University of Miami', 'University of Minnesota', 'University of South Florida', 
+    tier_dict = {'T20_Rsrch' : ['Harvard', 'Harvard University', 'Harvard Medical School', 'Grossman', 'Columbia', 'Hopkins', 'Johns Hopkins Hospital', 'Johns Hopkins University', 'Francisco', 
+                                'Duke', 'Duke University Health System', 'Duke University Hospital', 'Perelman', 'Stanford', 'Stanford University', 'University of Washington', 'Washington University/Barnes Hospital', 'University of Washington Medical Center', 
+                                'Yale', 'Icahn', 'Icahn School of Medicine at Mount Sinai', 'Washington University', 'Washington University School of Medicine in St. Louis', 'Washington University in St. Louis', 'Washington University in St. Louis', 'Vanderbilt', 'Vanderbilt University', 
+                                'Cornell', 'Mayo', 'Mayo Medical School', 'University of Pittsburgh', 'University of Pittsburg', 'University of Pittsburgh Medical Center', 'University Pittsburgh Medical Center Hospitals', 'Northwestern', 'McGaw Medical Center of Northwestern University', 
+                                'Northwestern University, Feinberg School of Medicine', 'University of Michigan', 'University of Michigan Health System', 'Los Angeles', 'San Diego', 'Pritzker'],
+                'T50_Rsrch' : ['Baylor', 'Baylor College of Medicine', 'Baylor University Medical Center', 'Emory', 'Case Western', 'Case Western University', 'University of North Carolina', 'University of Michigan Hospitals and Health Centers', 
+                                'Southwestern', 'Colorado', 'Southern California', 'University of Southern California', 'USC Medical Center', 'Maryland', 'LAC + USC Medical Center',  
+                                'Ohio State', 'The Ohio State Wexner Medical Center', 'University of Virginia', 'Boston', 'Oregon Health and Science', 'Oregon Health and Science University', 'Oregon Health Sciences University',  
+                                'Alabama', 'University of Alabama at Birmingham', 'Brown', 'University of Utah', 'University of Utah, Salt Lake City', 'University of Utah Medical Center', 'Albert Einstein', 
+                                'University of Florida', 'University of Rochester', 'University of Rochester School of Medicine', 'University of Wisconsin', 
+                                'Indiana University', 'University of Iowa', 'University of Iowa Hospitals and Clinics', 'University of Iowa, College of Medicine', 'University of Cincinnati', 
+                                'University of Miami', 'University of Minnesota', 'University of South Florida', 'University of South Florida Morsani School of Medicine, Mayo School of Graduate Medical Education', 'USF College of Medicine', 'University of South Florida College of Medicine', 
                                 'Dartmouth', 'University of Massachusetts', 'Texas Health and Science', 
                                 'Wake Forest', 'Davis'],
                 'T20_PC' : ['University of Washington', 'Francisco', 'Minnesota', 'Oregon Health and Science', 
-                            'University of North Carolina', 'University of Colorado', 'University of Nebraska', 
-                            'Davis', 'Harvard', 'University of Kansas', 'University of Massachusetts', 
-                            'University of PIttsburgh', 'Los Angeles', 'Brown', 'Maryland', 'Baylor', 'Iowa', 
-                            'New Mexico', 'Texas Southwestern', 'University of Michigan', 'University of Pennsylvania', 
-                            'University of Wisconsin'],
+                            'University of North Carolina', 'University of North Carolina - Chapel Hill', 'University of North Carolina at Chapel Hill', 'University of Colorado', 'University of Colorado School of Medicine', 'University of Nebraska', 'University of Nebraska Medical Center', 
+                            'Davis', 'Harvard', 'University of Kansas', 'University of Kansas Medical Center', 'University of Massachusetts', 
+                            'University of Pittsburgh', 'University of Pittsburgh School of Medicine', 'University of Pittsburgh School of Dental Medicine', 'University of Pittsburg Medical Center', 'Los Angeles', 'Brown', 'Maryland', 'University of Maryland Medical Center', 'Baylor', 'Iowa', 
+                            'New Mexico', 'Texas Southwestern', 'University of Michigan', 'University of Michicagn', 'University of Pennsylvania', 'University of Pennsylvania School of Medicine', 'Hospital of the University of Pennsylvania', 
+                            'University of Pennsylvania Health System', 'Hospital of The University of PA', 'University of Wisconsin'],
                 'T50_PC' : ['Indiana University', 'University of Hawaii', 'University of Utah', 'East Carolina University', 
-                            'University of Alabama', 'University of Rochester', 'University of Tennessee', 'Stanford', 
-                            'Pritzker', 'Ohio State', 'San Diego', 'University of Vermont', 'Virginia', 'Boston University', 
+                            'University of Alabama', 'University of Alabama Medical Center', 'University of Rochester', 'University of Tennessee', 'University of Tennessee Health Science Center', 'Stanford', 
+                            'Pritzker', 'Ohio State', 'Ohio State UMC', 'San Diego', 'University of California, San Diego', 'University of California - San Diego', 'University of Vermont', 'The University of Vermont Medical Center', 'Virginia', 'Boston University', 'Boston Medical Center',
                             'Dartmouth', 'Mayo', 'University of Arkansas', 'University of North Texas', 
-                            'University of Texas Health Science Center', 'Emory', 'Northwestern', 'Vanderbilt', 'Cornell', 
-                            'Tufts', 'University of Oklahoma', 'Grossman', 'Texas Tech University Health Sciences Center', 
-                            'University of Florida', 'Virginia Commonwealth'],
-                'T20_Resi' : ['Memorial Sloan', 'Massachusetts General', 'Hopkins', 'Mayo', 'San Fran', 'Penn Presbyterian', 
-                                'Ohio State', 'University of Michigan', 'Vanderbilt', 'MD Anderson', 'Los Angeles', 'UCLA', 
+                            'University of Texas Health Science Center', 'University of Texas Medical Branch', 'Emory', 'Emory University', 'Northwestern', 'Vanderbilt', 'Cornell', 
+                            'Tufts', 'Boston University/Tufts University', 'University of Oklahoma', 'University of Oklahoma, University of Colorado Health Science Center', 'University Of Oklahoma College of Medicine', 'Grossman', 'Texas Tech University Health Sciences Center', 
+                            'University of Florida', 'Virginia Commonwealth', 'Tufts University School of Medicine'],
+                'T20_Resi' : ['Memorial Sloan', 'Massachusetts General', 'Hopkins', 'Mayo', 'San Fran', 'University of California, San Francisco', 'Penn Presbyterian', 
+                                'Ohio State', 'University of Michigan', 'Vanderbilt', 'MD Anderson', 'Los Angeles', 'UCLA', 'UCLA Medical Center',  'University of California, Los Angeles School of Medicine', 'University of California, Los Angeles School of Medicine', 
                                 'Stanford', 'MUSC Health', 'OHSU', 'Presbyterian', 'University of Kansas', 'Cedars-Sinai', 
-                                'Brigham', 'Barnes-Jewish']
+                                'Brigham', 'Barnes-Jewish', 'University of California, Los Angeles School of Medicine']
                 }
-    
+
     if physician.get_residency() == 'N/A':
         physician.set_tier('N/A')
+        print('1')
         return
 
     found = False
     for key, _ in tier_dict.items():
-        # print(physician.get_residency(), tier_dict[key])
         if physician.get_residency() in tier_dict[key]:
-            physician.set_residency = key
+            physician.set_tier(key)
             found = True
             break
     
     if found == False and physician.get_residency() not in ['University Hospital of Louvain at Mont-Godinne', 'Thomas Jefferson University Hospitals']:
-        raise AttributeError(f'Residency: {physician.get_residency()} not in a tier')
+        physician.set_tier('N/A')
+        print(3)
+    
 
 
 def set_overall_rating_healthgrades(physician: physician.Physician, soup: BeautifulSoup) -> None:
@@ -91,9 +93,9 @@ def set_overall_rating_healthgrades(physician: physician.Physician, soup: Beauti
     '''
     overall_rating = soup.select('div.overall-rating-wrapper strong')
     try:
-        physician.set_overall_rating(float(overall_rating[0].text.strip())) # Converts the html to float
+        physician.set_overall_rating('Healthgrades', float(overall_rating[0].text.strip())) # Converts the html to float
     except IndexError:
-        physician.set_overall_rating('N/A')
+        physician.set_overall_rating('Healthgrades', 'N/A')
 
 def set_comment_healthgrades(physician: physician.Physician, soup: BeautifulSoup) -> None:
     '''
@@ -120,16 +122,11 @@ def set_comment_healthgrades(physician: physician.Physician, soup: BeautifulSoup
 
     json_data = json.loads(request.text)
 
-    # If no comments then skip
-    if json_data['totalCommentCount'] == 0:
-        physician.add_comment('N/A')
-        return
-
     total_comment_count = json_data['totalCommentCount']
     num_loops = math.ceil(total_comment_count / 5)
 
     for i in range(0, num_loops):
-        time.sleep(random.random()*10)
+        # time.sleep(random.random()*10)
         page_num += 1
 
         data = {'currentPage': page_num, 'includeAllAnswers': True, 'perPage': 5, 'pwid': pwid, 'sortOption': 1}
@@ -175,14 +172,10 @@ def set_overall_rating_vitals(physician: physician.Physician, soup: BeautifulSou
     '''
     time.sleep(random.random()*10)
     overall_rating = soup.select('#app > div.top-section > div.profile-header-container.loc-vs-prvdr > header > div > div > div.header-info > div > div.name-info > div > div.rating-section > a.ratings > span.rating-score')
-    # overall_rating = soup.find_all(class_ = 'material ua_type_desktop ua_device_pc js')
-    print(overall_rating)
     try:
-        physician.set_overall_rating(float(overall_rating[0].text.strip())) # Converts the html to float
+        physician.set_overall_rating('Vitals', float(overall_rating[0].text.strip())) # Converts the html to float
     except IndexError:
-        physician.set_overall_rating('N/A')
-    
-    print(physician.get_overall_rating())
+        physician.set_overall_rating('Vitals', 'N/A')
 
 def webscrape_vitals(physician: physician.Physician) -> None:
     '''
@@ -223,7 +216,6 @@ def webscrape_vitals(physician: physician.Physician) -> None:
     #     request = requests.post(url, headers=headers)
     #     json_data = json.loads(request.text)
 
-    #     print(json_data)
 
         # with requests.session() as s:
 
@@ -233,17 +225,12 @@ def webscrape_vitals(physician: physician.Physician) -> None:
         #     # get data:
         #     data = s.get(url, headers=headers).json()
 
-        #     # print data to screen:
-        #     print(json.dumps(data, indent=4))
-        #     quit()
 
         # headers = {'User-agent': 'Mozilla/5.0'}
 
         # request = requests.get('https://www.vitals.com/doctors/Dr_Adam_Luginbuhl/reviews', headers = headers) # Gets HTML of website
         # page = urllib.request.urlopen(request)
         # soup = BeautifulSoup(request.content, 'html.parser')
-        # print(soup.prettify())
-        # quit()
 
         # set_overall_rating_vitals(physician, soup)
         # set_comment_vitals(physician, soup)
@@ -262,7 +249,6 @@ def webscrape_ratemds(physician: physician.Physician) -> None:
 
         request = requests.get(url) # Gets HTML of website
         soup = BeautifulSoup(request.content, 'html.parser')
-        print(soup)
 
         # set_overall_rating_healthgrades(physician, soup)
         # set_comment_healthgrades(physician, soup)
@@ -274,9 +260,9 @@ def set_overall_rating_yelp(physician: physician.Physician, soup: BeautifulSoup)
     overall_rating = soup.select('#main-content > div.margin-b3__09f24__l9v5d.border-color--default__09f24__NPAKY > div > div > div.arrange__09f24__LDfbs.gutter-1-5__09f24__vMtpw.vertical-align-middle__09f24__zU9sE.margin-b2__09f24__CEMjT.border-color--default__09f24__NPAKY > div:nth-child(1) > span > div')
 
     try:
-        physician.set_overall_rating(float(overall_rating[0]['aria-label'][0])) # Converts the html to float
+        physician.set_overall_rating('Yelp', float(overall_rating[0]['aria-label'][0])) # Converts the html to float
     except IndexError:
-        physician.set_overall_rating('N/A')
+        physician.set_overall_rating('Yelp', 'N/A')
 
 def set_comment_yelp(physician: physician.Physician, soup: BeautifulSoup) -> None:
     '''
@@ -288,6 +274,8 @@ def set_comment_yelp(physician: physician.Physician, soup: BeautifulSoup) -> Non
         comment_tag = comment.find('span', {'raw__09f24__T4Ezm'})
         comment_text = comment_tag.text
 
+
+
         rating_tag = comment.find('div', {'i-stars__09f24__M1AR7 i-stars--regular-5__09f24__tKNMk border-color--default__09f24__NPAKY overflow--hidden__09f24___ayzG', 
                                             'i-stars__09f24__M1AR7 i-stars--regular-1__09f24__o88Iy border-color--default__09f24__NPAKY overflow--hidden__09f24___ayzG',
                                             'i-stars__09f24__M1AR7 i-stars--regular-2__09f24__mq_AY border-color--default__09f24__NPAKY overflow--hidden__09f24___ayzG',
@@ -297,12 +285,15 @@ def set_comment_yelp(physician: physician.Physician, soup: BeautifulSoup) -> Non
 
         comment_date = comment.find('span', {'css-chan6m'}).text
 
+
+
         try:
             useful_count = comment.find('span', {'css-1lr1m88'}).text.strip()
+            physician.add_comment((comment_date, 'Yelp', rating, comment_text, useful_count))
         except AttributeError:
             useful_count = 0
+            physician.add_comment((comment_date, 'Yelp', rating, comment_text, useful_count))
 
-        physician.add_comment((comment_date, 'Yelp', rating, comment_text, useful_count))
     
 def webscrape_yelp(physician: physician.Physician) -> None:
     '''
@@ -318,10 +309,6 @@ def webscrape_yelp(physician: physician.Physician) -> None:
     
     if len(total_num_queries) > 0:
         num_queries_left = int(total_num_queries[0].text[0])    
-        print(num_queries_left)
-        if num_queries_left > 10:
-            print(physician.get_first_name(), physician.get_last_name())
-            quit()
     else:
         num_queries_left = 1
 
@@ -355,8 +342,8 @@ def webscrape_links(physician: physician.Physician) -> None:
     # if physician.get_link('RateMDs') != 'N/A': # Does by page num in link
     #     webscrape_ratemds(physician)
 
-    if physician.get_link('Yelp') != 'N/A': # Does by num queries in link
-        webscrape_yelp(physician)
+    # if physician.get_link('Yelp') != 'N/A': # Does by num queries in link
+    #     webscrape_yelp(physician)
     
 
 def webscrape_list(list_of_physicians: list[physician.Physician]) -> None:
@@ -364,5 +351,6 @@ def webscrape_list(list_of_physicians: list[physician.Physician]) -> None:
     Calls webscrape on all physicians
     '''
     for physician in list_of_physicians:
+        set_tier(physician)
         webscrape_links(physician)
 

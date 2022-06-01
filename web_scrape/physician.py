@@ -5,15 +5,15 @@ class Physician:
     '''
     def __init__(self) -> None:
         self._id = 0
-        self._first_name = ''
-        self._last_name = ''
-        self._source = ''
-        self._residency = '' 
-        self._tier = ''
-        self._links = {'Healthgrades' : '', 'Vitals' : '', 'RateMDs' : '', 'Yelp' : ''} # Dictionary of links
+        self._first_name = 'N/A'
+        self._last_name = 'N/A'
+        self._source = 'N/A'
+        self._residency = 'N/A' 
+        self._tier = 'N/A'
+        self._links = {'Healthgrades' : 'N/A', 'Vitals' : 'N/A', 'RateMDs' : 'N/A', 'Yelp' : 'N/A'} # Dictionary of links
         self._comments = [] # List of 5-tuples of comments in form (Date, Source, Rating, Comment, Useful)
-        self._overall_rating = 0
-        self._helpful = 0 # 0 if not helpful 1 if was helpful
+        self._overall_rating = {'Healthgrades' : 'N/A', 'Vitals' : 'N/A', 'RateMDs' : 'N/A', 'Yelp' : 'N/A'}
+        self._helpful = 'N/A' # 0 if not helpful 1 if was helpful
 
     def get_id(self) -> int:
         '''
@@ -111,17 +111,17 @@ class Physician:
         '''
         self._comments.append(comment)
 
-    def get_overall_rating(self) -> int:
+    def get_overall_rating(self, source: str) -> int:
         '''
         Returns overall rating
         '''
-        return self._overall_rating
+        return self._overall_rating[source]
 
-    def set_overall_rating(self, rating: int) -> None:
+    def set_overall_rating(self, source: str, rating: int) -> None:
         '''
         Sets overall rating
         '''
-        self._overall_rating = rating
+        self._overall_rating[source] = rating
 
     def get_helpful(self) -> int:
         '''
